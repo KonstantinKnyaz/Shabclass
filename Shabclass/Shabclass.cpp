@@ -10,9 +10,9 @@ int main() {
 	setlocale(LC_ALL, "Russian");
 	srand(time_t(NULL));
 
-	WorkArrays<int> int_arr(10);
- 	WorkArrays<float> float_arr(10);
-	WorkArrays<long long> long_arr(10);
+	WorkArrays<int, 10> int_arr;
+ 	WorkArrays<float, 10> float_arr;
+	WorkArrays<long long, 10> long_arr;
 
 	for(int i = 0; i < int_arr.getLength(); i++){
 		int_arr[i] = rand() % 100;

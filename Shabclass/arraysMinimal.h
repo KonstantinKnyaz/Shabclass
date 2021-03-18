@@ -2,21 +2,19 @@
 #include <stdio.h>
 #include <cassert>
 
-template <class Type>
+template <class Type, int len>
 class WorkArrays {
 private:
-	int len;
 	Type *arr;
 public:
 	WorkArrays() {
-		this->len = 0;
-		this->arr = nullptr;
+		this->arr = new Type[length];
 	}
 
-	WorkArrays(int len) {
-		this->len = len;
-		this->arr = new Type[len];
-	}
+	/*WorkArrays(int length) {
+		this->len = length;
+		this->arr = new Type[length];
+	}*/
 
 	~WorkArrays() {
 		delete[] this->arr;
